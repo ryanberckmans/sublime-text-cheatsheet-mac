@@ -76,14 +76,16 @@
 \setlength{\columnsep}{2pt}
 
 \begin{center}
-     \Large{\underline{Sublime Text Cheatsheet (Mac)}} \\
-     \small{Version 1.4, updated \today}
+     \Large{\underline{Sublime Text 3 Cheatsheet (Mac)}} \\
+     \small{Version 1.5, updated \today}
 \end{center}
 
 \section{General}
 \keys{\cmd+\shift+P} Command Palette \\
 \keys{\cmd+P} Goto Anything \\
 \keys{\cmd+R} Goto Symbol \\
+\keys{\cmd+\Alt+\arrowkeydown} Goto Definition \\
+\keys{\cmd+\shift+R} Goto Symbol in Project \\
 \keys{\cmd+N} New File \\
 \keys{\cmd+S} Save File \\
 \keys{\cmd+\shift+S} Save File As \\
@@ -196,69 +198,8 @@
 \keys{\ctrl+\space} Show Completions \\
 \keys{\cmd+\Alt+T} Special Characters
 
-\section{Vintage Mode}
-Most basic vim commands should work (command mode only obviously) and can be preceded with a count. \\
-\keys{.} Repeat \\
-\keys{d}, \keys{count} (optional), \keys{motion}/\keys{dd}/\keys{D} Delete motion (e.g. a word) or delete line or delete line to end  \\
-\keys{c}, \keys{count} (optional), \keys{motion}/\keys{C} Change motion or change until end of line (enters insert mode) \\
-\keys{y}, \keys{count} (optional), \keys{motion}/\keys{yy} Yank motion or yank (copy) Line \\
-\keys{p}/\keys{P} Paste yanked/deleted text after/before the cursor \\
-\keys{0}/\keys{\$} Move to the beginning/end of a line \\
-\keys{g} Most of \keys{g}'s power is not implemented in Vintage Mode. You can use the basic combinations \keys{gg} and \keys{G} to move to the top/bottom of the file. \keys{number}, \keys{gg}/\keys{G} to move to that line. \\
-\keys{a}/\keys{A} Append to cursor/line (enters insert mode) \\
-\keys{i}/\keys{I} Insert before cursor/line (enters insert mode) \\
-\keys{w}/\keys{W} Move forward a Word/WORD (WORDs are whitespace-separated words) \\
-\keys{b}/\keys{B} Move backwards a Word/WORD \\
-\keys{e}/\keys{E} Move to the end of a Word/WORD \\
-\keys{f}, \keys{character}/\keys{F}, \keys{character} Find (character) forward/backwards on the current line \\
-\keys{r}, \keys{character} Replace character under cursor \\
-\keys{t}/\keys{T} 'till (forward/backward) Used in combination with motions like \keys{c} or \keys{d}. For example, \keys{d}, \keys{t}, \keys{\{} deletes everything until the next \texttt{\{} character (on the current line).  \\
-\keys{o}/\keys{O} Open line below/above (enters insert mode) \\
-\keys{\{}/\keys{\}} Move to the beginning/end of a paragraph \\
-\keys{s}/\keys{S} or \keys{cc} Substitute character/line (enters insert mode) \\
-\keys{H}(igh)/\keys{M}(id)/\keys{L}(ow) Move cursor to the top/middle/bottom of the screen \\
-\keys{J} Join Lines \\
-\keys{ZZ} Close File \\
-\keys{x} Delete character under cursor \\
-\keys{X} Backspace \\
-\keys{v}/\keys{V} Enters Visual Mode/Visual Line Mode \\
-\keys{n}/\keys{N} Find next/previous occurence of search \\
-\keys{>}, \keys{>}/\keys{<}, \keys{<} Indent/Unindent \\
-\keys{\textasciitilde} Swap Case \\
-\keys{q}, \keys{character}/\keys{@}, \keys{character} Record/play macro
-
-\newpage
-
-\section{Remapped commands}
-\keys{\ctrl+S} Show Sidebar \\
-\keys{\cmd+\ctrl+M} Toggle Minimap \\
-\keys{\cmd+\ctrl+K} Swap Line Up \\
-\keys{\cmd+\ctrl+J} Swap Line Down \\
-\keys{\cmd+\shift+K} Delete (kill) Line \\
-
-\section{Plug-ins}
-\subsection{AdvancedNewFile}
-\keys{\cmd+\Alt+N} New file from file/project directory (you can autocomplete directories) \\
-\keys{\cmd+\shift+\Alt+N} New file from file/project directory (adds an \texttt{\_\_init\_\_.py} file to each directory created)
-
-\subsection{ColorPicker}
-\keys{\cmd+\shift+C} Pops up a color picker and, after picking a color, inserts a hexcode
-
-\subsection{Emmet}
-\textbf{remapped} \keys{\ctrl+X} Expand abbreviation (e.g. \texttt{ul>li.listitem*6>a}) \\
-\keys{p}, \keys{2}, \keys{0}, \keys{\tab} expands to \texttt{padding: 20px} \\
-\keys{f}, \keys{z}, \keys{\tab} expands to \texttt{font-size:}
-
-\subsection{PlainTasks}
-Formats your TODO files as checklists. \\
-Appending a \keys{:} to words (like so Front-end:) creates headers. \\
-\keys{\cmd+\return} Create a new task \\
-\keys{\cmd+D} Finish/unfinish a task \\
-You can add tags with \keys{@}
-
-\subsection{FTPSync}
-\subsubsection{Remote Workflow}
-\textbf{remapped} \keys{\cmd+\ctrl+U}, \keys{\cmd+\ctrl+F} Upload the current file
+\section{Ryan notes}
+ST3 Groovy doesn't recognize enums. Goto Symbol/Definition won't work for enums. Use \keys{\cmd+P} and open FooEnum.groovy. \\
 
 \end{multicols}
 
